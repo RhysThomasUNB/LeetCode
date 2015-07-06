@@ -17,7 +17,7 @@ vector<string> summaryRanges(vector<int>& nums)
           startNum = nums[i];
           nextNum = startNum + 1;
       }
-      if(nums[i + 1] == nextNum)
+      if((i + 1) < nums.size() && nums[i + 1] == nextNum)
           nextNum++;
       else
       {
@@ -37,12 +37,14 @@ vector<string> summaryRanges(vector<int>& nums)
 
 int main()
 {
-  int myints[] = {0, 1, 2, 4, 5, 7, 9, 10, 11, 12};
-  vector<int> nums (myints, myints + sizeof(myints) / sizeof(int) );
+//  int myints[] = {0, 1,2, 4, 5, 7};
+  vector<int> nums;
+  nums.push_back(-1);//(myints, myints + sizeof(myints) / sizeof(int) );
   vector<string> results = summaryRanges(nums);
   for(int i = 0; i < results.size(); i++)
   {
-    printf("%s, ", results[i].c_str() );
+    printf("%s", results[i].c_str() );
+    printf(" ");
   }
   printf("\n");
   return 0;
