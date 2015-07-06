@@ -37,9 +37,8 @@ vector<string> summaryRanges(vector<int>& nums)
 
 int main()
 {
-//  int myints[] = {0, 1,2, 4, 5, 7};
   vector<int> nums;
-  nums.push_back(-1);//(myints, myints + sizeof(myints) / sizeof(int) );
+  nums.push_back(-1);
   vector<string> results = summaryRanges(nums);
   for(int i = 0; i < results.size(); i++)
   {
