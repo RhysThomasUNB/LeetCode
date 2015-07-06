@@ -32,6 +32,6 @@ int main()
     userNums.push_back(userIn);
 
   int result = firstMissingPositive(userNums);
-  printf("first missing positive is: %d\n", result);
+  printf("First missing positive is: %d\n", result);
   return 0;
 }
